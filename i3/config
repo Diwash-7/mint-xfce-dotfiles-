@@ -102,12 +102,6 @@ bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 
 
-# Brightness control using brightnessctl
-bindsym F8 exec sudo ~/.local/bin/brightness-down.sh
-bindsym F9 exec sudo ~/.local/bin/brightness-up.sh
-
-
-
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
 
@@ -211,3 +205,17 @@ exec_always --no-startup-id otd-daemon
 
 #for removint title bar
 for_window [class="^.*"] border pixel 3
+
+
+# backlight
+# Brightness controls
+bindsym F7 exec --no-startup-id brightnessctl set +5%
+bindsym F6 exec --no-startup-id brightnessctl set 5%-
+
+# Volume Control
+bindsym F8 exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5%
+bindsym F9 exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5%
+bindsym F10 exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle
+
+ # monitor
+assign [workspace="5"] output HDMI-1
