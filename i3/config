@@ -196,7 +196,7 @@ bindsym $mod+r mode "resize"
 gaps inner 7
 gaps outer 3
 
-exec_always --no-startup-id feh --randomize  --bg-fill  ~/Pictures/wallpapers/blue.jpeg
+exec_always --no-startup-id feh --randomize  --bg-fill  ~/Pictures/wallpapers/purple.jpeg
 exec_always --no-startup-id ~/.config/polybar/forest/launch.sh
 exec_always --no-startup-id picom
 exec_always --no-startup-id /home/diwash/.config/i3/autotiling/venv/bin/autotiling
@@ -219,3 +219,7 @@ bindsym F10 exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle
 
  # monitor
 assign [workspace="5"] output HDMI-1
+
+
+# Screenshot with flameshot
+bindsym Print exec --no-startup-id flameshot gui
